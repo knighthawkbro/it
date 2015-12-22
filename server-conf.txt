@@ -10,8 +10,8 @@ echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.0 main" | sudo
 sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo service mongod status
-sudo iptables -A INPUT -s 172.24.100.135/32 -p tcp --destination-port 27017 -m state --state NEW,ESTABLISHED -j ACCEPT
-sudo iptables -A OUTPUT -d 172.24.100.135/32 -p tcp --source-port 27017 -m state --state ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --destination-port 27017 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --source-port 27017 -m state --state ESTABLISHED -j ACCEPT
 sudo iptables-save
 mongo
 use it
