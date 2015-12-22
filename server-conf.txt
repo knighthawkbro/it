@@ -1,0 +1,47 @@
+Ubuntu server - mongo
+---------------------
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y open-vm-tools
+sudo shutdown -r now
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.cop:80 --recv 7F0CEB10
+sudo apt-get update
+echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sudo service mongod status
+sudo iptables -A INPUT -s 172.24.100.135/32 -p tcp --destination-port 27017 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -d 172.24.100.135/32 -p tcp --source-port 27017 -m state --state ESTABLISHED -j ACCEPT
+sudo iptables-save
+mongo
+use it
+db.createUser( { "user" : "root",
+                 "pwd": "bw121992",
+                 "roles" : [ { role: "clusterAdmin", db: "admin" },
+                             { role: "readAnyDatabase", db: "admin" },
+                             "readWrite"
+                             ] },
+               { w: "majority" , wtimeout: 5000 } )
+sudo nano /etc/mongod.conf
+bind_ip = 127.0.0.1,172.24.100.133
+sudo service mongod restart
+
+
+Ubuntu server - app
+---------------------
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y open-vm-tools
+sudo shutdown -r now
+sudo nano /etc/hostname
+app
+sudo nano /etc/hosts
+127.0.0.1	app
+sudo shutdown -r now
+sudo apt-get install -y build-essential
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+mkdir it
+sudo apt-get install -y vsftpd
+sudo nano /etc/vsftpd.conf
+write_enable=YES
