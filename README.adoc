@@ -1,1 +1,10 @@
-Test
+IT Front end
+============
+:Author: Brady Walsh 
+:Email: <walshb8@wit.edu>
+:Date: 2/2/16
+:Revision: 1.0.1
+
+About
+~~~~~
+This is the code dump for the App server I am working on at CCA. All Node.js/Express/Jade files will live here. All documentation will be kept within this README file.
