@@ -25,6 +25,11 @@ db.createUser( { "user" : "root",
 sudo nano /etc/mongod.conf
 bind_ip = 127.0.0.1,172.24.100.133
 sudo service mongod restart
+sudo wget -O /usr/local/bin/rsub https://raw.github.com/aurora/rmate/master/rmate
+sudo chmod a+x /usr/local/bin/rsub 
+sudo rsub /etc/init.d/disable-transparent-hugepages
+sudo chmod 755 /etc/init.d/disable-transparent-hugepages
+sudo update-rc.d disable-transparent-hugepages defaults 
 
 
 Ubuntu server - app
@@ -42,6 +47,21 @@ sudo apt-get install -y build-essential
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 sudo apt-get install -y nodejs
 mkdir it
+cd it
 sudo apt-get install -y vsftpd
 sudo nano /etc/vsftpd.conf
 write_enable=YES
+sudo wget -O /usr/local/bin/rsub https://raw.github.com/aurora/rmate/master/rmate
+sudo chmod a+x /usr/local/bin/rsub 
+npm install
+rsub package.json
+npm start
+git init
+git config --global user.name "knighthawkbro"
+git config --global user.email "walshb8@wit.edu"
+git remote add origin https://github.com/knighthawkbro/it.git
+git pull origin master
+rsub .gitignore
+git add -A
+git commit -m "Initial commit"
+git push -u origin master
