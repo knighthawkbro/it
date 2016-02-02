@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h3.
+		Employees
+	ul
+		each employee, i in cca
+			li#cca_employee
+				a(href="#") Name: #{employee.name.fname} #{employee.name.lname}
+				br
+				a(href="#") Work Email: #{employee.email.work}
+				br
+				a(href="#") Work Phone: #{employee.phone.work}
+	br
+	br
+	a(href="/add")
