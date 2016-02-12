@@ -5,6 +5,39 @@ IT Front end
 :Date: 2/2/16
 :Revision: 1.0.1
 
+Table of contents:
+------------------
+<<about,About>> +
+<<phase-1,Phase 1>> +
+<<phase-2,Phase 2>> +
+<<phase-3,Phase 3>> +
+
+anchor:about[]
 About
 ~~~~~
-This is the code dump for the App server I am working on at CCA. All Node.js/Express/Jade files will live here. All documentation will be kept within this README file.
+This is the code dump for the App server I am working on at CCA. All Node.js/Express/Jade files will live here. All documentation will be kept within this README file. +
+
+anchor:phase-1[]
+Phase 1 (Completed on 02/02/2016):
+~~~~~~~~~~~~~~~~~~~~
+Create 2 servers, one application server (NodeJS/Express) and one database server (MongoDB), and have them talk between each other. All configuration settings have been documented in the link:https://github.com/knighthawkbro/it/blob/master/server-conf[server-conf.txt] file. Express should start the server successfully and talk to the MongoDB and present useful feedback to the user. If the webserver is able to get and post data to the database everything has been set up correctly. +
+
+anchor:phase-2[]
+Phase 2 (In progress):
+~~~~~~~~~~~~~~~~~~~~~~
+Develop a front-end application that will handle all the requests to the database. All work done will be committed to this git page. Here are some requirements I have come up with (this is going to change in the future): +
+.Todo:
+* Develop a upload function to take excels and convert to JSON and then push them to the database.
+	- This should be an update/add function where it checks each entry for existing data (I am going to use email as a unique identifier)
+* Add queries and custom searches for specific data requests.
+	- Searching for a specific user
+	- Searching for specific information (SP tickets, Jira Ticket, etc.)
+* Add a function to help clean up any duplicates
+* Have the abilty to export data into clean spreadsheats
+* Secure the website with user authentication
+* This list is a work-in-progress+
+
+anchor:phase-3[]
+Phase 3 (In progress):
+~~~~~~~~~~~~~~~~~~~~~~
+Clean up the existing spreadsheat used to keep track of everything. I am going to break this up into sections. First I am going to do CCA employees past and present. Depending on the spead in which it takes me to upload this into MongoDB I may come up with alternative solutions. I have created a plain text JSON file which will be turned into a script for MongoDB. This process is entirely manual. Then I will work on cleaning up and uploading Dell's system access to MongoDB. Then finally I will clean and upload Optums data. After this I should have a functional database and all future requests should be uploaded and maintained in this database.+
