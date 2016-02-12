@@ -13,11 +13,11 @@ IT Front end
 
 anchor:about[]
 === About
-This is the code dump for the App server I am working on at CCA. All Node.js/Express/Jade files will live here. All documentation will be kept within this README file. +
+This is the code dump for the App server I am working on at CCA. All Node.js/Express/Jade (May switch Jade for handlebars depending on my level of comfortability) files will live here. All documentation will be kept within this README file. +
 
 anchor:phase-1[]
 === Phase 1 (Completed on 02/02/2016):
-Create 2 servers, one application server (NodeJS/Express) and one database server (MongoDB), and have them talk between each other. All configuration settings have been documented in the link:https://github.com/knighthawkbro/it/blob/master/server-conf[server-conf.txt] file. Express should start the server successfully and talk to the MongoDB and present useful feedback to the user. If the webserver is able to get and post data to the database everything has been set up correctly. +
+Create 2 servers, one application server (NodeJS/Express) and one database server (MongoDB), and have them talk between each other. All configuration settings have been documented in the link:https://github.com/knighthawkbro/it/blob/master/server-conf.txt[server-conf.txt] file. Express should start the server successfully and talk to the MongoDB and present useful feedback to the user. If the webserver is able to get and post data to the database everything has been set up correctly. +
 
 anchor:phase-2[]
 === Phase 2 (In progress):
