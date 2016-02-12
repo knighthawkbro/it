@@ -6,10 +6,10 @@ IT Front end
 :Revision: 1.0.1
 
 == Table of contents:
-<<about,About>> +
-<<phase-1,Phase 1>> +
-<<phase-2,Phase 2>> +
-<<phase-3,Phase 3>> +
+* <<about,About>>
+* <<phase-1,Phase 1>>
+* <<phase-2,Phase 2>>
+* <<phase-3,Phase 3>>
 
 anchor:about[]
 
