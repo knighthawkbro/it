@@ -1,6 +1,7 @@
 Route Documentation
 ============
-[format="csv",width="80%",cols="4,^2,^2,10",options="header"]
+[format="csv"]
+[options="header",cols=",,s,,m"]
 |======
 Routes,Verb,Description,Variables
 /welcome,GET,Default route for all users,
