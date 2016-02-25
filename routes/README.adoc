@@ -1,0 +1,5 @@
+[format="csv",width="60%",cols="4"]
+|======
+Routes,Verb,Description,Variables
+/welcome,GET,Default Route,
+|======
