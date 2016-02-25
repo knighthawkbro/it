@@ -1,5 +1,7 @@
-[format="csv",width="60%",cols="4"]
+Route Documentation
+============
+[format="csv",width="80%",cols="4,^2,^2,10",options="header"]
 |======
 Routes,Verb,Description,Variables
-/welcome,GET,Default Route,
+include::routes.csv[]
 |======
