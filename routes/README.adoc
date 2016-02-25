@@ -3,5 +3,5 @@ Route Documentation
 [format="csv",width="80%",cols="4,^2,^2,10",options="header"]
 |======
 Routes,Verb,Description,Variables
-include::routes.csv[]
+/welcome,GET,Default route for all users,
 |======
