@@ -1,0 +1,8 @@
+Route Documentation
+============
+[format="csv"]
+[options="header",cols=",s,,m"]
+|======
+Routes,Verb,Description,Variables
+/welcome,GET,Default route for all users,
+|======
