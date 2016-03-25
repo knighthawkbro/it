@@ -33,6 +33,9 @@ anchor:phase-2[]
 Develop a front-end application that will handle all the requests to the database. All work done will be committed to this git page. Here are some requirements I have come up with (this is going to change in the future): 
 
 .Todo
+* Create the https://en.wikipedia.org/wiki/Create,_read,_update_and_delete[CRUD] mongoose models.
+* Implement user authentication (Completed 3/24/2016)
+* Develop API routes (Completed 3/24/2016)
 * Develop a upload function to take excels and convert to JSON and then push them to the database.
 	- This should be an update/add function where it checks each entry for existing data (I am going to use email as a unique identifier)
 * Add queries and custom searches for specific data requests.
